@@ -17,7 +17,7 @@ def _check_library(l):
     assert 'url' in library, "No url field in %s" % l
     assert 'prototypes' in library, "No prototypes field in %s" % l
 
-    for p, prototype in library['prototypes'].iteritems():
+    for p, prototype in library['prototypes'].items():
         LOG.debug('checking prototype %s', p)
         assert 'development_status' in prototype, "No developement_status field in %s::%s" % (l, p)
         assert 'author' in prototype, "No author field in %s::%s" % (l, p)
